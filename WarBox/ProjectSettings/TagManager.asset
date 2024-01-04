@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - DanoInimigo
+  - Dano
+  - Enemy
   layers:
   - Default
   - TransparentFX
