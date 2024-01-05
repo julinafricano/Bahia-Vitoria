@@ -46,15 +46,6 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
-    // Chamado quando outro collider entra no trigger
-    void OnTriggerEnter(Collider other)
-    {
-        // Verificar se o objeto no trigger tem a tag 'atkare'
-        if (other.CompareTag(attackAreaTag))
-        {
-            lastInstantiationTime = Time.time;
-        }
-    }
 
     // Método para instanciar o objeto (tiro)
     void InstanciarObjeto()

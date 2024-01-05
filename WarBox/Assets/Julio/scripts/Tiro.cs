@@ -31,8 +31,8 @@ public class Tiro : MonoBehaviour
         }
     }
 
-    // Método chamado quando o tiro entra em um collider (não trigger)
-    void OnCollisionEnter(Collision collision)
+    // Método chamado quando o tiro entra em um collider (trigger ou não)
+    void OnTriggerEnter(Collider other)
     {
         // Destruir o tiro ao colidir com qualquer objeto
         Destroy(gameObject);
