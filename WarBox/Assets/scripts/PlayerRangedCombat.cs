@@ -9,8 +9,13 @@ public class PlayerRangedCombat : MonoBehaviour
 
     private float nextFireTime = 0f;
 
+    public AudioClip Som;
+    public AudioSource SomAttack;
+
     void Update()
     {
+        SomAttack = GetComponent<AudioSource>();
+        SomAttack.clip = Som;
         HandleInput();
     }
 
@@ -22,6 +27,7 @@ public class PlayerRangedCombat : MonoBehaviour
             {
                 ShootArrow();
                 nextFireTime = Time.time + 1f / fireRate;
+                SomAttack.Play();
             }
         }
     }

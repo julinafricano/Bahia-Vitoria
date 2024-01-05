@@ -14,6 +14,14 @@ public class PlayerCombat : MonoBehaviour
     private float rotationAmount = 0f;
     public float tempopulo = 1f;
 
+    public AudioClip Som;
+    public AudioSource SomAttack;
+
+    void Start() {
+        SomAttack = GetComponent<AudioSource>();
+        SomAttack.clip = Som;
+    }
+
     void Update()
     {
 
@@ -29,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
+                SomAttack.Play();
             }
         }
 

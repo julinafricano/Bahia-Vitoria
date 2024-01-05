@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector3 originalScale;
     private SpriteRenderer spriteRenderer;
 
+    private bool isDead = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
 
         // Restrição para tomar dano apenas a cada 0.5 segundo
@@ -80,12 +85,21 @@ public class Player : MonoBehaviour
 
     private void TakeDamage(int damageAmount)
     {
+        // Se o jogador já está morto, não faça nada
+        if (isDead)
+        {
+            return;
+        }
+
         health -= damageAmount;
 
         if (health <= 0)
         {
             // Implemente a lógica de derrota (game over) aqui
             Debug.Log("Game Over!");
+
+            // Destrua o jogador
+            Destroy(gameObject);
         }
         else
         {
