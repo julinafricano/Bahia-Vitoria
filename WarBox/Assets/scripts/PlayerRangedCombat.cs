@@ -54,7 +54,7 @@ public class PlayerRangedCombat : MonoBehaviour
         rb.AddForce(arrowDirection * (firePoint.localScale.x > 0 ? arrowSpeed : -arrowSpeed), ForceMode2D.Impulse);
 
         // Destrói a flecha após um determinado tempo (ajuste conforme necessário)
-        Destroy(arrow, 2f);
+        Destroy(arrow, 5f);
     }
 
     void OnDrawGizmosSelected()

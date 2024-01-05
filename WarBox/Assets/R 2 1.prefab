@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7167076984880451639}
   m_Layer: 0
   m_Name: R 2 1
-  m_TagString: Untagged
+  m_TagString: Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 6dc7b3588ba1f384f9a3fc221531b8e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -121,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09503311, y: 0.11008343}
+  m_Offset: {x: 0.09503299, y: -0.061697245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 43.009266, y: 34}
+    oldSize: {x: 2.3894036, y: 1.8888888}
     newSize: {x: 1.8888888, y: 2.3894036}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43487072, y: 1.3772972}
+  m_Size: {x: 1.3837558, y: 0.5102124}
   m_EdgeRadius: 0
 --- !u!114 &7167076984880451639
 MonoBehaviour:
